@@ -83,7 +83,7 @@
                             <t t-set="total" t-value="0"/>
                             <tr t-foreach='categories' t-as='category'>
                                 <td>
-                                    <t t-esc="category['name']['en_US']"/>
+                                    <t t-esc="category['name']['en_US'] if isinstance(category['name'], dict) else category['name']"/>
                                 </td>
                                 <td style="text-align: right;">
                                     <t t-esc="category['amount']"
@@ -109,7 +109,7 @@
                             <t t-set="total" t-value="0"/>
                             <tr t-foreach='payments' t-as='payment'>
                                 <td>
-                                    <t t-esc="payment['name']['en_US']"/>
+                                    <t t-esc="payment['name']['en_US'] if isinstance(payment['name'], dict) else payment['name']"/>
                                 </td>
                                 <td style="text-align: right;">
                                     <t t-esc="payment['total']"
