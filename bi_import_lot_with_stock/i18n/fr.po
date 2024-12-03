@@ -1,0 +1,140 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bi_import_lot_with_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-31 08:05+0000\n"
+"PO-Revision-Date: 2021-05-31 08:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.model.fields.selection,name:bi_import_lot_with_stock.selection__stock_import__import_prod_option__barcode
+msgid "Barcode"
+msgstr "code à barre"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.model.fields.selection,name:bi_import_lot_with_stock.selection__stock_import__import_option__csv
+msgid "CSV File"
+msgstr "Fichier CSV"
+
+#. module: bi_import_lot_with_stock
+#: model_terms:ir.ui.view,arch_db:bi_import_lot_with_stock.stk_imp__wizard_view
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.model.fields.selection,name:bi_import_lot_with_stock.selection__stock_import__import_prod_option__code
+msgid "Code"
+msgstr "Code"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.model.fields,field_description:bi_import_lot_with_stock.field_stock_import__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.model.fields,field_description:bi_import_lot_with_stock.field_stock_import__create_date
+msgid "Created on"
+msgstr "Créé sur"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.model.fields,field_description:bi_import_lot_with_stock.field_stock_import__display_name
+msgid "Display Name"
+msgstr "Afficher un nom"
+
+#. module: bi_import_lot_with_stock
+#: code:addons/bi_import_lot_with_stock/wizard/import_lot_with_stock.py:0
+#, python-format
+msgid "Don't Use Character only, Use numbers too..!!"
+msgstr "N'utilisez pas uniquement des caractères, utilisez aussi des nombres .. !!"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.model.fields,field_description:bi_import_lot_with_stock.field_stock_import__file
+msgid "File"
+msgstr "Déposer"
+
+#. module: bi_import_lot_with_stock
+#: model_terms:ir.ui.view,arch_db:bi_import_lot_with_stock.stk_imp__wizard_view
+msgid "Generate Inv"
+msgstr "Générer une inv"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.model.fields,field_description:bi_import_lot_with_stock.field_stock_import__id
+msgid "ID"
+msgstr "identifiant"
+
+#. module: bi_import_lot_with_stock
+#: model_terms:ir.ui.view,arch_db:bi_import_lot_with_stock.stk_imp__wizard_view
+msgid "Import"
+msgstr "Importer"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.model.fields,field_description:bi_import_lot_with_stock.field_stock_import__import_prod_option
+msgid "Import Product By "
+msgstr "Importer le produit par"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.actions.act_window,name:bi_import_lot_with_stock.stk_imp_wizard
+#: model:ir.ui.menu,name:bi_import_lot_with_stock.stk_wizard_import
+msgid "Import lot number with stock"
+msgstr "Importer le numéro de lot avec le stock"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.model.fields,field_description:bi_import_lot_with_stock.field_stock_import__lot_with_date
+msgid "Import lot with date details"
+msgstr "Importer le lot avec les détails de la date"
+
+#. module: bi_import_lot_with_stock
+#: code:addons/bi_import_lot_with_stock/wizard/import_lot_with_stock.py:0
+#, python-format
+msgid "Invalid CSV file!"
+msgstr "Fichier CSV non valide!"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.model.fields,field_description:bi_import_lot_with_stock.field_stock_import____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.model.fields,field_description:bi_import_lot_with_stock.field_stock_import__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.model.fields,field_description:bi_import_lot_with_stock.field_stock_import__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.model.fields,field_description:bi_import_lot_with_stock.field_stock_import__location
+msgid "Location"
+msgstr "Emplacement"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.model.fields,field_description:bi_import_lot_with_stock.field_stock_import__name
+#: model:ir.model.fields.selection,name:bi_import_lot_with_stock.selection__stock_import__import_prod_option__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.model.fields,field_description:bi_import_lot_with_stock.field_stock_import__import_option
+msgid "Select"
+msgstr "Sélectionner"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.model.fields.selection,name:bi_import_lot_with_stock.selection__stock_import__import_option__xls
+msgid "XLS File"
+msgstr "Fichier XLS"
+
+#. module: bi_import_lot_with_stock
+#: model:ir.model,name:bi_import_lot_with_stock.model_stock_import
+msgid "stock.import"
+msgstr ""

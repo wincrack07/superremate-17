@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+    <record id="stk_imp__wizard_view" model="ir.ui.view">
+        <field name="name">wizard for import xls file </field>
+        <field name="model">stock.import</field>
+        <field name="arch" type="xml">
+            <form string="Generate Inv">
+                <group>
+                    <group>
+                        <field name="location" />
+                        <field name="name"/>
+                    </group>
+
+                    <group>
+                        <field name="lot_with_date"/>
+                    </group>
+                </group>
+                <group>
+                    <field name="import_prod_option"/>
+                </group>
+                <group>
+                    <field name="import_option" />
+                </group>
+
+                <group>
+                    <field name="filename" invisible="1"/>
+                    <field name="file"  filename="filename"  />
+                </group>
+                
+                <group>
+                    <group string="Download Sample XLS and CSV Files">
+                        <field name="down_samp_file" widget="checkbox" />
+                        <field name="sample_option" widget="radio" invisible = "down_samp_file == False"/>
+                        <button name="download_auto" string="Download Sample File" type="object" class="oe_highlight" invisible ="down_samp_file == False"/>
+                    </group>
+                </group>
+                
+                <footer>
+                    <button name="import_file" string="Import" type="object"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="stk_imp_wizard" model="ir.actions.act_window">
+        <field name="name">Import lot number with stock</field>
+        <field name="res_model">stock.import</field>
+        
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <record id="stock_lot_inherit" model="ir.ui.view">
+            <field name="name">stock.lot.inherit</field>
+            <field name="model">stock.lot</field>
+            <field name="inherit_id" ref="stock.view_production_lot_form"/>
+            <field name="arch" type="xml">
+                <field name="product_qty" position="after">
+                    <field name="qty_file" invisible="1"/>
+                </field>
+            </field>
+        </record>
+
+
+
+   <menuitem action="stk_imp_wizard"
+        id="stk_wizard_import"
+        parent="stock.menu_stock_warehouse_mgmt" 
+        sequence="31"
+    />
+</data>
+</odoo>
