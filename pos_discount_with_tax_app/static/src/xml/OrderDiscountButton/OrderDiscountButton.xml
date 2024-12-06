@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="OrderDiscountButton">
+        <div class="control-button o_pricelist_button btn btn-light rounded-0 fw-bolder" t-on-click="() => this.click()">
+            <i class="fa fa-user-circle-o"  aria-hidden="true"/>
+            <t t-esc="discountType"/>
+        </div>
+    </t>
+</templates>

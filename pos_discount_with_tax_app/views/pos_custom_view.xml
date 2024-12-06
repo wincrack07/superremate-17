@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<odoo>
+	 <record model="ir.ui.view" id="pos_config_settings_item_count">
+        <field name="name">res.config.setting.pos.item.form.view</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+			<xpath expr="//block[@id='pos_interface_section']" position='after'>
+				<block title="Order Discount in POS" id="session_config">
+					<setting id="allow_order_disc" string="Allow Order Discount."
+							 help="Allow Discount on Order.">
+						<field name="allow_order_disc"/>
+						<div class="content-group mt16">
+							<group invisible="not allow_order_disc">
+								<field name="order_discount_on" required="allow_order_disc"/>
+								<field name="acc_account_id" required="allow_order_disc"/>
+								<field name="disc_product_id" required="allow_order_disc"/>
+							</group>
+						</div>
+					</setting>
+				</block>
+			</xpath>
+		</field>
+	 </record>
+
+	<record id="view_pos_order_inherit_order_disc" model="ir.ui.view">
+		<field name="name">view.pos.order.inherit.order.disc</field>
+		<field name="model">pos.order</field>
+		<field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='amount_tax']" position="after">
+				<field name="order_discount" force_save="1" widget="monetary" invisible="discount_on == 'orderline'"/>
+			</xpath> 
+			<xpath expr="//field[@name='partner_id']" position="after">
+				<field name="discount_on"  readonly="1"/>
+				<field name="order_discount_type" invisible="discount_on == 'orderline'" readonly="1"/>
+			</xpath> 
+			<xpath expr="//form/sheet/notebook/page/field[@name='lines']//tree/field[@name='discount']" position="before">
+				<field name="orderline_discount_type"/>
+				<field name="is_line_discount" invisible="1"/>
+			</xpath>
+		</field>
+	</record>
+</odoo>

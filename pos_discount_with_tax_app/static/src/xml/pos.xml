@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="pos_discount_template" inherit_id="point_of_sale.template" xml:space="preserve">
+	<t t-name="OrderWidgetInherit" t-inherit="point_of_sale.OrderWidget" t-inherit-mode="extension" owl="1">
+		<xpath expr="//div[hasclass('order-summary')]" position="replace">
+			<div t-if="props.total or props.tax"
+				 class="order-summary w-100 py-2 px-3 bg-100 text-end fw-bolder fs-2 lh-sm">
+				<t t-set="subtotal" t-value="getSubtotal()" />
+				<t t-set="discount" t-value="getDiscount()" />
+				<t t-set="edge_tax" t-value="getTax()" />
+
+                <div style="font-size: 17px;">
+                    <span class="value" style="border-top: 2px solid #00000091; padding-top: 5px;">
+                        Subtotal:
+                    </span>
+                    <span class="value" style="border-top: 2px solid #00000091; padding-top: 5px;">
+                        <t t-esc="subtotal" />
+                    </span>
+                </div>
+                <div t-if="props.tax" class="fs-6 text-muted subentry">
+                    Taxes: <span t-esc="props.tax" class="tax"/>
+                </div>
+                <div class="subentry" style="color: #4A4F59;font-weight: bold; font-size: 17px; padding: 5px;">
+                    Discount:
+                    <span class="value">
+                        <t t-esc="discount" />
+                    </span>
+                </div>
+                <div>
+                    <span class="value" style="border-top: 2px solid #00000091; padding-top: 5px; font-size: 17px;">
+                        Total:
+                    </span>
+                    <span t-esc="props.total" class="value"
+                                    style="border-top: 2px solid #00000091; padding-top: 5px; font-size: 17px;"/>
+                </div>
+            </div>
+		</xpath>
+	</t>
+</templates>

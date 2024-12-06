@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+
+	<t t-name="TaxTotalsFieldInherit" t-inherit="account.TaxTotalsField" t-inherit-mode="extension" owl="1">
+		<xpath expr='//t[@t-key="taxGroup.group_key"]' position="before">
+			<tr>
+				<td class="o_td_label">
+					<span class="o_form_label o_tax_total_label">Discount </span>
+				</td>
+				<td>
+					<span t-out="totals.order_discount" style="white-space: nowrap; font-weight: bold;"/>
+				</td>
+			</tr>
+		</xpath>
+	</t>
+
+</templates>
